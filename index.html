@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="calculator-box">
+        <div class="display-area">
+            <div id="sec-display"></div>
+            <input type="text" id="display">
+        </div>
+        <table>
+            <tr>
+                <td colspan="3"><button id="clear" onclick="clearSol()">AC</button></td>
+                <td><button id="divide" onclick="concat('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button id="seven" value="7" onclick="concat(7)">7</button></td>
+                <td><button id="eight" value="8" onclick="concat(8)">8</button></td>
+                <td><button id="nine" value="9" onclick="concat(9)">9</button></td>
+                <td><button id="multiply" onclick="concat('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button id="fout" value="4" onclick="concat(4)">4</button></td>
+                <td><button id="five" value="5" onclick="concat(5)">5</button></td>
+                <td><button id="six" value="6" onclick="concat(6)">6</button></td>
+                <td><button id="subtract" onclick="concat('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button id="one" value="1" onclick="concat(1)">1</button></td>
+                <td><button id="two" value="2" onclick="concat(2)">2</button></td>
+                <td><button id="three" value="3" onclick="concat(3)">3</button></td>
+                <td><button id="add" onclick="concat('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button id="zero" value="0" onclick="concat(0)">0</button></td>
+                <td><button id="point" onclick="concat('.')">.</button></td>
+                <td colspan="2"><button id="equal" type="submit" value="submit" onclick="solution()">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
