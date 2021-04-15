@@ -6,8 +6,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator - JS</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: monospace;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 135, 255);
+    background: linear-gradient(288deg, rgba(0, 135, 255, 1) 0%, rgba(154, 0, 249, 1) 100%);
+}
+
+.calculator-box {
+    background-color: #fff;
+    width: 28rem;
+    height: 49rem;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.display-area {
+    width: 100%;
+    height: 28.58%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+table {
+    width: 100%;
+    height: 71.42%;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1.75rem;
+    filter: brightness(100%);
+}
+
+button:hover {
+    filter: brightness(95%);
+}
+
+#divide,
+#multiply,
+#add,
+#subtract,
+#clear {
+    background-color: aliceblue;
+}
+
+#equal {
+    background-color: rgb(193, 201, 207);
+    border-radius: 0 0 2rem;
+}
+
+#zero {
+    border-radius: 0 0 0 2rem;
+}
+
+#display {
+    text-align: right;
+    font-size: 2rem;
+    width: calc(100% - 1rem);
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+#sec-display {
+    position: absolute;
+    bottom: 4rem;
+    right: 0.5rem;
+    width: calc(100% - 1rem);
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+    </style>
+    
+    <script>
+        let x;
+let sol;
+
+function clearSol() {
+    document.getElementById("display").value = "";
+    document.getElementById("sec-display").innerHTML = "";
+}
+
+function concat(x) {
+    document.getElementById("display").value += x;
+}
+
+function solution() {
+    document.getElementById("sec-display").innerHTML = document.getElementById("display").value;
+    sol = eval(document.getElementById("display").value);
+    document.getElementById("display").value = sol;
+}
+    </script>
 </head>
 
 <body>
